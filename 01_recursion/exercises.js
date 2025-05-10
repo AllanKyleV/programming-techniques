@@ -52,3 +52,12 @@ function productOfArray(arr) {
     return arr[0] * productOfArray(arr.slice(1));
 }
 console.log(productOfArray([5, 2, 1, 4]));
+console.log('---------------')
+
+// Recursive Palindrome Checker
+function isPalindrome(str) {
+    if (str.length <= 1) return true;
+    if(str[0] !== str[str.length - 1]) return false;
+    return isPalindrome(str.slice(1, -1));
+}
+console.log(isPalindrome('sos'));
